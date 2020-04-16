@@ -71,7 +71,7 @@ class LoadTaskList:
         load_job = self.bq.load_table_from_uri(
             uri, table_ref, job_config=job_config
         )
-        print("Starting job {load_job.job_id}")
+        print(f"Starting job {load_job.job_id}")
 
         # for k in config['load']:
         #     print(k)
