@@ -7,20 +7,8 @@ class LoadTaskList:
     def __init__(self, service_account_file_name='', config_name: str = 'bq_load.conf'):
         self.config_registry = {}
         if service_account_file_name:
-            credentials = service_account.Credentials.from_service_account_file( 
-                service_account_file_name, 
-                scopes=["https://www.googleapis.com/auth/cloud-platform"],
-            )
-
-            self.gcs = storage.Client(
-                credentials=credentials,
-                project=credentials.project_id,
-            )
-
-            self.bq = bigquery.Client(
-                credentials=credentials,
-                project=credentials.project_id,
-            )
+            self.gcs = storage.Client.from_service_account_json(service_account_file_name)
+            self.bq = bigquery.Client.from_service_account_json(service_account_file_name)
         else:
             self.gcs = storage.Client()
             self.bq = bigquery.Client()
