@@ -1,10 +1,10 @@
 # BQ Load
-Google cloud function to load data from GCS into BigQuery
+Google cloud function to load data from GCS into BigQuery.
+
+![BigQuery load from Google cloud storage](bqload.png)
 
 ## Installation
-Use provide Terraform script
-
-## Usage
+Use the provided Terraform script `bqload.tf`
 
 ### Deploying
 
@@ -14,6 +14,9 @@ If you need specific users to access the BQ dataset/table you can specify a list
 ```
 terraform apply -var="bq_users=[\"my_user@google.com\"]"
 ```
+
+## Usage
+
 
 ### Config file
 
