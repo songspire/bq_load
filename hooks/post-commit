@@ -1,5 +1,0 @@
-#!/bin/sh
-
-cd function
-zip bqload.zip *
-
