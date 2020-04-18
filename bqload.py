@@ -42,7 +42,13 @@ class LoadTaskList:
         # config_registry. No need to load any data so just return afer that.
         if object_path.endswith(self.config_name):
             self.read_config(bucket_name, object_path)
-            return
+            return(0)
+
+        bucket = self.gcs.get_bucket(bucket_name)
+        blob = bucket.get_blob(object_path)
+        if blob.content_type != 'text/csv':
+            print(f"ERROR: {bucket_name}/{object_path} is not CSV file. Ignoring.")
+            return(-1)
 
         config = self.get_config(bucket_name, object_path)
 
