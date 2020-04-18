@@ -3,6 +3,7 @@ from google.oauth2 import service_account
 from google.cloud import storage
 from google.cloud import bigquery
 
+# ToDo: add filetype (CSV, etc.) to config and implement logic in process task
 class LoadTaskList:
     def __init__(self, service_account_file_name='', config_name: str = 'bq_load.conf'):
         self.config_registry = {}
@@ -35,6 +36,7 @@ class LoadTaskList:
         self.config_registry[base_path] = config
         return(config)
 
+    # ToDo: Support other filetypes besides CSV
     def process_task(self, bucket_name: str, object_path: str):
         # If the config file name appear at the end of the object_path then
         # the config file itself was written i.e. modified and we need to 

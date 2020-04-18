@@ -3,3 +3,4 @@ Pipfile*
 manifest.json
 bq_load.conf
 deploy.sh
+samples.txt
