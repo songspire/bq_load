@@ -19,7 +19,7 @@ terraform apply -var="bq_users=[\"my_user@google.com\"]"
 
 The parameters of the load job are defined in a config file residing in the same path as the files to be ingested are uploaded. The default filename of the load config file is bq_load.conf.
 
-Note: The bucket is created with a lifecycle policy which deletes all objects older than 1 day. To avoid deleting any bq_load.conf files, Place a [temparary hold](https://cloud.google.com/storage/docs/holding-objects#place-object-hold) on each bq_load.conf object in your buckect so that these are not deleted by the bucket's lifecycle policy. 
+Note: The bucket is created with a lifecycle policy which deletes all objects older than 1 day. To avoid deleting any bq_load.conf files, Place a [temporary hold](https://cloud.google.com/storage/docs/holding-objects#place-object-hold) on each bq_load.conf object in your buckect so that these are not deleted by the bucket's lifecycle policy. 
 
 The syntax of the load config file is:
 ```

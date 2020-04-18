@@ -3,6 +3,8 @@ from google.oauth2 import service_account
 from google.cloud import storage
 from google.cloud import bigquery
 
+__version__ = "0.2"
+
 # ToDo: add filetype (CSV, etc.) to config and implement logic in process task
 class LoadTaskList:
     def __init__(self, service_account_file_name='', config_name: str = 'bq_load.conf'):
