@@ -6,6 +6,7 @@ from google.cloud import bigquery
 __version__ = "0.2"
 
 # ToDo: add filetype (CSV, etc.) to config and implement logic in process task
+# ToDo: add logic to handle hash verification of uploaded files
 class LoadTaskList:
     def __init__(self, service_account_file_name='', config_name: str = 'bq_load.conf'):
         self.config_registry = {}
