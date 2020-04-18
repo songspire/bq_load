@@ -4,6 +4,8 @@ Google cloud function to load data from GCS into BigQuery
 ## Installation
 Use provide Terraform script
 
+[https://avatars2.githubusercontent.com/u/19502595?s=60&v=4]
+
 ## Usage
 
 ### Deploying
