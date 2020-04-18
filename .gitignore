@@ -1,7 +1,6 @@
-books-514-sa.json
 Pipfile*
 manifest.json
 bq_load.conf
-deploy.sh
 samples.txt
 terraform.*
+.terraform/*
