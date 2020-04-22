@@ -1,6 +1,8 @@
 # BQ Load
 Google cloud function to load data from GCS into BigQuery.
 
+A data file uploaded into your '[BUCKET]' triggers the cloud function which creates a BQ load job for to load the data into the desired BQ dataset and table. The format of the data file, BQ dataset and table are secified in a file named bq_load.conf which must reside in the same path the data files are uploaded to, for more details see the section "Config File" below.  
+
 ![BigQuery load from Google cloud storage](bqload.png)
 
 ## Installation
